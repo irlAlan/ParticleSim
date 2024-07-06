@@ -1,6 +1,6 @@
 #include <ParticleSim/ParticleSim.h>
 
-void ParticleSim::Init(std::string title, Vec2d dimensions)
+void ParticleSim::Init(std::string title, Types::Vec2d dimensions)
 {
   this->title = title;
   this->dimensions = dimensions;
@@ -14,20 +14,52 @@ void ParticleSim::Init(std::string title, Vec2d dimensions)
   #endif
 
 // put this in a test
-  this->window = glfwCreateWindow(dimensions(0), dimensions(1), "Learning OpenGL", NULL, NULL);
-  if(window == NULL){
+  this->window = glfwCreateWindow(dimensions(0), dimensions(1), "Learning OpenGL", nullptr, nullptr);
+  if(window == nullptr){
     this->Exit("Failed to create GLFW window", -1);
 
   }
   glfwMakeContextCurrent(window);
-
   if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
     this->Exit("Failed to initialise glad", -1);
   }
+
+  glViewport(0, 0, dimensions.x(), dimensions.y());
+  glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+}
+
+
+void ParticleSim::processInput(GLFWwindow* window){
+  if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+    glfwSetWindowShouldClose(window, true);
+}
+
+int ParticleSim::Run(){
+  while(!glfwWindowShouldClose(window)){
+    // INPUTS
+    processInput(window);
+
+    // render commands
+    ClearWindow(Types::RGBA{0.2f, 0.3f, 0.3f,1.0f});
+
+    // events and swap buffers
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+  }
+  return 0;
+}
+
+void ParticleSim::ClearWindow(Types::RGBA col){
+    glClearColor(col.x(), col.y(), col.z(), col.w());
+    glClear(GL_COLOR_BUFFER_BIT);
+}
+
+void ParticleSim::framebuffer_size_callback(GLFWwindow* window, int width, int height){
+  glViewport(0, 0, width, height);
 }
 
 int ParticleSim::Exit(std::string exit_message, int code){
-  fmt::println(exit_message);
+  fmt::print("message: {}\n code: {}\n", exit_message, code);
   glfwTerminate();
   return code;
 }

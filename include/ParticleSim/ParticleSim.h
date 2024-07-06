@@ -1,25 +1,26 @@
 #ifndef PARTICLE_SIM_H
 #define PARTICLE_SIM_H
 
-#include <string>
-#include <Eigen/Dense>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <fmt/core.h>
+#include <ParticleSim/CoreIncludes.h>
 
 class ParticleSim{
 public:
-  using Vec2d = Eigen::Matrix<int, 2,1>;
-public:
+  int Run();
+protected:
   ParticleSim()  = default;
   ~ParticleSim() = default;
 
-  void Init(std::string title, Vec2d dimensions);
+  void Init(std::string title, Types::Vec2d dimensions);
   int Exit(std::string exit_message, int code);
 
+  void processInput(GLFWwindow* window);
+
+  static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+  void ClearWindow(Types::RGBA col);
+
 private:
-  GLFWwindow *window;
-  Vec2d dimensions;
+  GLFWwindow* window;
+  Types::Vec2d dimensions;
   std::string title;
 };
 

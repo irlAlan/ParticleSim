@@ -4,12 +4,24 @@
  * Make a window that works
  * add eigen
  * */
-
+  
 // void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
+class Application : public ParticleSim{
+public:
+  Application(std::string title, int width, int height){
+    Init(title, {width, height});
+  }
+  ~Application(){
+    Exit("Finished", 0);
+  }
+};
+
+
+
 int main(){
-  ParticleSim ps;
-  ps.Init("Learning Opengl", ParticleSim::Vec2d{800, 600});
+  Application app{"Learning Opengl", 900, 500};
+  app.Run();
 
 
 //  glfwInit();
