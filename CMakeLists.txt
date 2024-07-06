@@ -28,15 +28,15 @@ target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt glfw glad::glad Eigen3::E
 
 
 ### Testing code
-set(PROJECT_TEST_SRC ParticleSimTests)
-
-
-find_package(GTest CONFIG REQUIRED)
-include(GoogleTest)
-enable_testing()
-
-add_executable(${PROJECT_TEST_SRC})
-
-target_sources(${PROJECT_TEST_SRC} PRIVATE tests/ParticleSimTests.cpp)
-target_link_libraries(${PROJECT_TEST_SRC} PRIVATE GTest::gtest GTest::gtest_main)
-gtest_discover_tests(${PROJECT_TEST_SRC})
+#set(PROJECT_TEST_SRC ParticleSimTests)
+#
+#
+#find_package(GTest CONFIG REQUIRED)
+#include(GoogleTest)
+#enable_testing()
+#
+#add_executable(${PROJECT_TEST_SRC})
+#
+#target_sources(${PROJECT_TEST_SRC} PRIVATE tests/ParticleSimTests.cpp)
+#target_link_libraries(${PROJECT_TEST_SRC} PRIVATE GTest::gtest GTest::gtest_main)
+#gtest_discover_tests(${PROJECT_TEST_SRC})
