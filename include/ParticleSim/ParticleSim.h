@@ -1,26 +1,31 @@
 #ifndef PARTICLE_SIM_H
 #define PARTICLE_SIM_H
 
-#include <ParticleSim/CoreIncludes.h>
+// TODO:
+// Change this class 
+//
+#include <VoxelEngine/CoreIncludes.h>
 
 class ParticleSim{
+  using Vec2d = VoxelEngine::Types::Vec2d;
+  using RGBA = VoxelEngine::Types::RGBA;
 public:
   int Run();
 protected:
   ParticleSim()  = default;
   ~ParticleSim() = default;
 
-  void Init(std::string title, Types::Vec2d dimensions);
+  void Init(std::string title, Vec2d dimensions);
   int Exit(std::string exit_message, int code);
 
   void processInput(GLFWwindow* window);
 
   static void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-  void ClearWindow(Types::RGBA col);
+  void ClearWindow(RGBA col);
 
 private:
   GLFWwindow* window;
-  Types::Vec2d dimensions;
+  Vec2d dimensions;
   std::string title;
 };
 

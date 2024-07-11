@@ -1,6 +1,10 @@
 #include <ParticleSim/ParticleSim.h>
 
-void ParticleSim::Init(std::string title, Types::Vec2d dimensions)
+// TODO
+// Change this class 
+
+
+void ParticleSim::Init(std::string title, Vec2d dimensions)
 {
   this->title = title;
   this->dimensions = dimensions;
@@ -40,7 +44,7 @@ int ParticleSim::Run(){
     processInput(window);
 
     // render commands
-    ClearWindow(Types::RGBA{0.2f, 0.3f, 0.3f,1.0f});
+    ClearWindow(RGBA{0.2f, 0.3f, 0.3f,1.0f});
 
     // events and swap buffers
     glfwSwapBuffers(window);
@@ -49,7 +53,7 @@ int ParticleSim::Run(){
   return 0;
 }
 
-void ParticleSim::ClearWindow(Types::RGBA col){
+void ParticleSim::ClearWindow(RGBA col){
     glClearColor(col.x(), col.y(), col.z(), col.w());
     glClear(GL_COLOR_BUFFER_BIT);
 }
