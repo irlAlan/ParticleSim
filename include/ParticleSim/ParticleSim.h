@@ -4,6 +4,8 @@
 // TODO:
 // Change this class 
 //
+
+/*
 #include <VoxelEngine/CoreIncludes.h>
 
 class ParticleSim{
@@ -28,5 +30,5 @@ private:
   Vec2d dimensions;
   std::string title;
 };
-
+*/
 #endif // PARTICLE_SIM_H

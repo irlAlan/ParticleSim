@@ -1,0 +1,2 @@
+/usr/bin/ar qc libVoxelEngine.a CMakeFiles/VoxelEngine.dir/src/Shapes.cpp.o CMakeFiles/VoxelEngine.dir/src/VoxelEngine.cpp.o CMakeFiles/VoxelEngine.dir/src/glad/glad.c.o
+/usr/bin/ranlib libVoxelEngine.a
