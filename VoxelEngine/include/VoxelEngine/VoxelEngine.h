@@ -1,7 +1,7 @@
 #ifndef VOXEL_ENGINE
 #define VOXEL_ENGINE
 
-namespace VoxelEngine {
+namespace VEngine {
 class VoxelEngine {
 public:
   void Init();
@@ -18,6 +18,5 @@ public:
 private:
   bool _running;
 };
-} // namespace VoxelEngine
-
+} // namespace VEngine
 #endif // !VOXEL_ENGINE

@@ -1,16 +1,12 @@
 #include <VoxelEngine/VoxelEngine.h>
 #include <fmt/core.h>
 
+void VEngine::VoxelEngine::Init() { fmt::print("Is this working?"); }
 
-void VoxelEngine::VoxelEngine::Init(){
-  fmt::print("Is this working?");
-}
+void VEngine::VoxelEngine::Cleanup() {}
 
-void VoxelEngine::VoxelEngine::Cleanup(){}
+void VEngine::VoxelEngine::Draw() {}
 
-void VoxelEngine::VoxelEngine::Draw(){}
+void VEngine::VoxelEngine::Update() {}
 
-void VoxelEngine::VoxelEngine::Update(){}
-
-void VoxelEngine::VoxelEngine::HandleEvents(){}
-
+void VEngine::VoxelEngine::HandleEvents() {}

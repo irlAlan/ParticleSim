@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cmake --build build/; ./build/ParticleSim
+cmake -B build/; cmake --build build/;

@@ -1,7 +1,8 @@
-#include <iostream>
-//#include <VoxelEngine/VoxelEngine.h>
+#include <VoxelEngine/VoxelEngine.h>
+#include <fmt/core.h>
 
 int main() {
-  std::cout << "Yo";
+  VEngine::VoxelEngine engine;
+  engine.Init();
   return 0;
 }

@@ -1,5 +1,5 @@
 #include <VoxelEngine/Shapes.h>
 
-VoxelEngine::Shapes::Shapes(){
+VEngine::Shapes::Shapes(){
   fmt::print("Hello there");
 }

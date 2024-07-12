@@ -5,7 +5,7 @@
 #include <fmt/core.h>
 
 
-namespace VoxelEngine{
+namespace VEngine{
 class Shapes{
   public:
     using VertexBuffObj = unsigned int;

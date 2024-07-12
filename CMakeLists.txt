@@ -13,8 +13,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_definitions("-Wall" "-g")
 
-add_subdirectory(VoxelEngine)
+#add_subdirectory(VoxelEngine)
 
+find_package(fmt CONFIG REQUIRED)
+find_package(glfw3)
+find_package(Eigen3 3.4 REQUIRED)
+
+include_directories(${CMAKE_SOURCE_DIR}/VoxelEngine/include)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB HEADER_FILES ${CMAKE_SOURCE_DIR}/include/ParticleSim/*.h)
@@ -22,4 +27,4 @@ file(GLOB HEADER_FILES ${CMAKE_SOURCE_DIR}/include/ParticleSim/*.h)
 
 
 add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEADER_FILES})
-target_link_libraries(${PROJECT_NAME} VoxelEngine)
+target_link_libraries(${PROJECT_NAME} fmt::fmt glfw Eigen3::Eigen ${CMAKE_SOURCE_DIR}/lib/libVoxelEngine.a)
