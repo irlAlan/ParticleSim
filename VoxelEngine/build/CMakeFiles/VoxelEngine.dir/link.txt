@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/VoxelEngine.dir/src/Shapes.cpp.o CMakeFiles/VoxelEngine.dir/src/VoxelEngine.cpp.o CMakeFiles/VoxelEngine.dir/src/test.cpp.o CMakeFiles/VoxelEngine.dir/src/glad/glad.c.o -o VoxelEngine  /usr/lib/libfmt.so.10.2.0 /usr/lib/libglfw.so.3.4

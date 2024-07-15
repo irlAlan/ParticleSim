@@ -10,10 +10,26 @@ class Window {
 public:
   Window(std::string title, Types::Vec2d dim);
 
+
+  void displayWindow();
   std::string getTitle() const { return _title; }
   Types::Vec2d getDimensions() const { return _dimensions; }
   Types::RGBA getBackgroundCol() const { return _backgroundCol; }
 
+  bool windowIsOpen();
+  void exitWindow(std::string message, int exit_code);
+
+private:
+  GLFWwindow *window;
+  std::string _title{"hey"};
+  Types::Vec2d _dimensions{100, 100};
+  Types::RGBA _backgroundCol{0.7f, 0.7f, 0.7f, 1.0f};
+
+//private:
+
+//void static viewportSizeChange(GLFWwindow* window, int width, int height);
+
+public:
   // copy constructor
   Window(const Window &other)
       : _title(other._title), _dimensions(other._dimensions),
@@ -47,12 +63,9 @@ public:
     }
     return *this;
   }
-  ~Window() = default;
-
-private:
-  std::string _title{"hey"};
-  Types::Vec2d _dimensions{100, 100};
-  Types::RGBA _backgroundCol{0.7f, 0.7f, 0.7f, 1.0f};
+  ~Window(){
+    exitWindow("closing window", 0);
+  }
 };
 } // namespace VEngine
 #endif // !WINDOWSETTINGS_H

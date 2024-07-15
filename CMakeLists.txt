@@ -19,7 +19,7 @@ find_package(fmt CONFIG REQUIRED)
 find_package(glfw3)
 find_package(Eigen3 3.4 REQUIRED)
 
-include_directories(${CMAKE_SOURCE_DIR}/VoxelEngine/include)
+# include_directories(${CMAKE_SOURCE_DIR}/VoxelEngine/include)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB HEADER_FILES ${CMAKE_SOURCE_DIR}/include/ParticleSim/*.h)
