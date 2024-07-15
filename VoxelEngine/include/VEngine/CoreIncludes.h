@@ -10,6 +10,6 @@
 #include <fmt/core.h>
 #include <fmt/ostream.h>
 
-#include <VoxelEngine/Types.h>
+#include <VEngine/Types.h>
 
 #endif // !CORE_INCLUDES_H

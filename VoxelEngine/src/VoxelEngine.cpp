@@ -1,7 +1,9 @@
-#include <VoxelEngine/VoxelEngine.h>
+#include <VEngine/VoxelEngine.h>
 #include <fmt/core.h>
 
-void VEngine::VoxelEngine::Init() { fmt::print("Is this working?"); }
+void VEngine::VoxelEngine::Init() { 
+  fmt::print("Title: {}\n Size: {}x{}\n", win.getTitle(), win.getDimensions().x(), win.getDimensions().y());
+}
 
 void VEngine::VoxelEngine::Cleanup() {}
 

@@ -13,6 +13,12 @@
 },
 {
   "directory": "/home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/include -isystem /usr/include/eigen3 -std=c++17   -Wall -g -o CMakeFiles/VoxelEngine.dir/src/test.cpp.o -c /home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/src/test.cpp",
+  "file": "/home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/src/test.cpp",
+  "output": "CMakeFiles/VoxelEngine.dir/src/test.cpp.o"
+},
+{
+  "directory": "/home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/build",
   "command": "/usr/bin/cc -DFMT_SHARED -I/home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/include -isystem /usr/include/eigen3   -Wall -g -o CMakeFiles/VoxelEngine.dir/src/glad/glad.c.o -c /home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/src/glad/glad.c",
   "file": "/home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/src/glad/glad.c",
   "output": "CMakeFiles/VoxelEngine.dir/src/glad/glad.c.o"

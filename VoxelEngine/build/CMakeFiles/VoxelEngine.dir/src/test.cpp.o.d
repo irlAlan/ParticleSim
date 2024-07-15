@@ -1,5 +1,5 @@
-CMakeFiles/VoxelEngine.dir/src/VoxelEngine.cpp.o: \
- /home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/src/VoxelEngine.cpp \
+CMakeFiles/VoxelEngine.dir/src/test.cpp.o: \
+ /home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/src/test.cpp \
  /usr/include/stdc-predef.h \
  /home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/include/VEngine/VoxelEngine.h \
  /home/irlalan/secret/Cpp/ParticleSim/VoxelEngine/include/VEngine/Window.h \
