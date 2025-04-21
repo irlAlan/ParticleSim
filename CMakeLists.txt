@@ -11,6 +11,7 @@ add_definitions("-Wall" "-g")
 
 
 find_package(fmt CONFIG REQUIRED)
+find_package(imgui)
 find_package(glfw3)
 find_package(Eigen3 3.4 REQUIRED)
 
@@ -20,4 +21,4 @@ file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB HEADER_FILES ${CMAKE_SOURCE_DIR}/include/ParticleSim/*.h)
 
 add_executable(${PROJECT_NAME} ${SRC_FILES} ${GLAD_SRC} ${HEADER_FILES})
-target_link_libraries(${PROJECT_NAME} fmt::fmt glfw Eigen3::Eigen)
+target_link_libraries(${PROJECT_NAME} fmt::fmt glfw Eigen3::Eigen imgui)
